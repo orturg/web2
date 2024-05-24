@@ -1,0 +1,447 @@
+body {
+    background-color: gray;
+    padding-top: 10px;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.products {
+    background-color: white;
+    border-radius: 5px;
+    flex-grow: 2;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    position: relative;
+}
+
+.basket {
+    background-color: white;
+    border-radius: 5px;
+    flex-grow: 1;
+    height: 340px;
+    box-sizing: border-box;
+}
+
+ @media (max-width: 500px) {
+            .products, .basket {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+}
+
+.texfield-area {
+    padding: 20px;
+}
+
+.textfield {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+
+.product-name-textfield {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid gray;
+    border-radius: 5px 0 0 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    height: 41px;
+}
+
+.product-name-button {
+    width: 100px;
+    background: royalblue;
+    border: 1px solid blue;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+    box-sizing: border-box;
+    color: white;
+    height: 41px;
+}
+
+.product-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    position: relative;
+}
+
+.product-item {
+    padding: 20px;
+}
+
+.product-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid gray;
+}
+
+.product-name {
+    flex-grow: 3;
+}
+
+.product-input-area {
+    flex-grow: 3;
+}
+
+.product-input {
+    width: 100px;
+    height: 20px;
+    border: 1px solid royalblue;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px royalblue;
+}
+
+.crossed {
+    text-decoration: line-through;
+}
+
+.product-amount {
+    width: 40px;
+    height: 40px;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: lighter;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.second {
+    padding-left: 40px;
+}
+
+.third {
+    padding-right: 15px;
+}
+
+.product-controls {
+    flex-grow: 3;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.control-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.minus {
+    background-color: red;
+}
+
+.plus {
+    background-color: green;
+}
+
+.product-amount {
+    width: 40px;
+    height: 40px;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0 10px;
+}
+
+.pale {
+    background-color: #e0a0a0;
+}
+
+.product-status {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #f5f5f5;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    transition: background-color 0.3s;
+}
+
+.product-status:hover {
+    background-color: #e0e0e0;
+}
+
+.product-delete {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-left: 10px;
+    position: relative;
+}
+
+.product-delete:hover {
+    background-color: darkred;
+}
+
+.product-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.solid {
+    border-top: 1px solid gray;
+}
+
+.basket-box {
+    padding: 12px;
+}
+
+.basket-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.item-name {
+    flex-grow: 1;
+    padding-right: 10px;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.item-amount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: orange;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.item-button {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: #f5f5f5;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    padding-inline: 5px;
+}
+
+
+.background-basket {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: white;
+    padding: 10px;
+    gap: 20px;
+}
+
+.badge-container {
+      position: fixed;
+      left: 5px;
+      bottom: 0px;
+      background-color: darkviolet;
+      width: 130px;
+      height: 70px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      transition: height 0.5s ease; 
+}
+
+.buy-text {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 20px;
+}
+
+.badge-container:hover {
+      height: 140px;
+      transition-delay: 0.1s;
+      background-color: blue;
+
+}
+
+.created-text {
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-inline: 20px;
+}
+
+.author-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-inline: 20px;
+    padding-left: 20px;
+}
+
+@media print {
+    @page {
+        size: A4;
+    }
+
+    html, body {
+        width: 100%;
+        height: 100%;
+        background-color: gray;
+        box-sizing: border-box;
+    }
+
+    .container {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .badge-container {
+        position: fixed;
+        background-color: white;
+        border: 2px solid darkviolet;
+        z-index: 1;
+    }
+
+    .buy-text::before {
+        content: "Created by:"; 
+        color: black;
+        font-size: 12px;
+        display: block;
+    }
+
+    .created-text::before {
+    content: "Nozhenko Artur"; 
+    display: block; 
+    font-size: 16px; 
+    color: black; 
+    }
+
+    .buy-text {
+        font-size: 12px; 
+        padding: 5px; 
+    }
+
+    .created-text {
+        padding: 1px 14px; 
+    }
+
+    .author-text {
+        display: none;
+    }
+}
+
+
+.tooltip {
+    position: absolute;
+    background-color: darkviolet;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px) scale(0.5); 
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+    bottom: 125%; 
+    left: 50%;
+}
+
+.button-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.button-wrapper:hover .tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1); 
+}
+
+
+button[data-tooltip] {
+    position: relative;
+}
+
+button[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%; 
+    left: 50%;
+    transform: translateX(-50%) translateY(10px) scale(0.5); 
+    background-color: darkviolet;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+button[data-tooltip]:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1); 
+}
