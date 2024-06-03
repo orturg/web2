@@ -8,14 +8,13 @@ body {
     display: flex;
     align-items: flex-start;
     padding: 20px;
-    flex-wrap: wrap;
     gap: 20px;
 }
 
 .products {
     background-color: white;
     border-radius: 5px;
-    flex-grow: 2;
+    width: 66%;
     box-sizing: border-box;
     border: 1px solid gray;
     position: relative;
@@ -24,10 +23,10 @@ body {
 .basket {
     background-color: white;
     border-radius: 5px;
-    flex-grow: 1;
-    height: 340px;
+    width: 33%;
     box-sizing: border-box;
 }
+
 
  @media (max-width: 500px) {
             .products, .basket {
@@ -83,11 +82,9 @@ body {
     align-items: center;
     padding: 10px 0;
     position: relative;
-}
-
-.product-item {
     padding: 20px;
 }
+
 
 .product-item::after {
     content: '';
@@ -107,7 +104,7 @@ body {
 }
 
 .product-input {
-    width: 100px;
+    width: 10%;
     height: 20px;
     border: 1px solid royalblue;
     border-radius: 3px;
@@ -118,34 +115,43 @@ body {
     text-decoration: line-through;
 }
 
+.product-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 10px 0;
+    position: relative;
+    padding: 20px;
+}
+
+.product-controls {
+    display: flex;
+    align-items: center;
+    margin-right: 300px;
+}
+
 .product-amount {
     width: 40px;
     height: 40px;
-    background-color: gray;
+    background-color: #e0e0e0;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 8px;
-    font-size: 16px;
-    font-weight: lighter;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-left: 10px; 
 }
 
-
-.second {
-    padding-left: 40px;
+.first {
+    padding-right: 25px;
 }
 
-.third {
-    padding-right: 15px;
+.not-bought {
+    visibility: hidden;
 }
 
-.product-controls {
-    flex-grow: 3;
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-}
 
 .control-button {
     width: 40px;
@@ -165,8 +171,18 @@ body {
     background-color: red;
 }
 
+.partly-hidden {
+    visibility: hidden;
+}
+
+
 .plus {
     background-color: green;
+}
+
+
+.padding-right {
+    width: 26.8px;
 }
 
 .product-amount {
@@ -224,6 +240,10 @@ body {
     background-color: darkred;
 }
 
+.hidden {
+    display: none;
+}
+
 .product-buttons {
     display: flex;
     align-items: center;
@@ -231,10 +251,13 @@ body {
 
 .solid {
     border-top: 1px solid gray;
+    width: 100%;
 }
 
 .basket-box {
     padding: 12px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .basket-title {
@@ -244,11 +267,11 @@ body {
 }
 
 .item-name {
-    flex-grow: 1;
     padding-right: 10px;
     color: #333;
     font-size: 16px;
     font-weight: bold;
+    width: fit-content;
 }
 
 .item-amount {
@@ -274,16 +297,21 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
     padding-inline: 5px;
+    box-sizing: border-box;
+    width: fit-content;
 }
 
 
 .background-basket {
     display: flex;
+    width: fit-content;
     align-items: center;
     border: none;
     background: white;
-    padding: 10px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
     gap: 20px;
+    padding: 10px;
 }
 
 .badge-container {
