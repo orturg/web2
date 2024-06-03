@@ -8,95 +8,87 @@
 </head>
 <body>
 
-    <div class="container">
-       <span class="badge-container">
-                <span class="buy-text">Buy List</span>
-                <span class="created-text">Created by:</span>
-                <span class="author-text">Nozhenko Artur</span>
+    <div class="container" id="container">
+       <span class="badge-container" id="badge-container">
+                <span class="buy-text" id="buy-text">Buy List</span>
+                <span class="created-text" id="created-text">Created by:</span>
+                <span class="author-text" id="author-text">Nozhenko Artur</span>
         </span>   
 
-        <div class="products">
-            <div class="texfield-area">
-                <div class="textfield">
-                    <input type="text" class="product-name-textfield" placeholder="Назва товару">
-                    <button class="product-name-button" data-tooltip="tootip">Додати</button>
+        <div class="products" id="products">
+            <div class="texfield-area" id="texfield-area">
+                <div class="textfield" id="textfield">
+                    <input type="text" class="product-name-textfield" id="product-name-textfield" placeholder="Назва товару">
+                    <button class="product-name-button" id="product-name-button" data-tooltip="Додати">Додати</button>
                 </div>
             </div>
 
-            <div class="product-list">
-                <div class="product-item">
-                    <span class="product-name crossed">Помідори</span>
-                    <span class="product-controls first">
-                        <span class="product-amount first">2</span>
+            <div class="product-list" id="product-list">
+                <div class="product-item" id="product-item1">
+                    <span class="product-name crossed" id="product-name">Помідори</span>
+                    <span class="product-controls second" id="product-controls">
+                        <span class="padding-left" id="padding-left"></span>
+                        <button class="control-button minus partly-hidden" id="minus-button1" data-tooltip="Зменшити">-</button>
+                        <span class="product-amount" id="product-amount">2</span>
+                        <button class="control-button plus partly-hidden" id="plus-button1" data-tooltip="Додати">+</button>
+                        <span class="padding-right" id="padding-right"></span>
+                        
                     </span>
-                    <button class="product-status" data-tooltip="tootip">Не куплено</button>
+                    <button class="product-status" id="status-button1" data-tooltip="Прибрати">Не куплено</button>
+                    <button class="product-delete hidden" id="delete-button1" data-tooltip="Видалити">x</button>
                 </div>
 
-                <div class="product-item">
-                    <span class="product-name">Печиво</span>
-                    <span class="product-controls second">
-                        <button class="control-button minus" data-tooltip="tootip">-</button>
-                        <span class="product-amount">2</span>
-                        <button class="control-button plus" data-tooltip="tootip">+</button>
+                <div class="product-item" id="product-item2">
+                    <span class="product-name" id="product-name">Печиво</span>
+                    <span class="product-controls second" id="product-controls">
+                        <button class="control-button minus" id="minus-button2" data-tooltip="Зменшити">-</button>
+                        <span class="product-amount" id="product-amount">2</span>
+                        <button class="control-button plus" id="plus-button2" data-tooltip="Додати">+</button>
                     </span>
-                    <button class="product-status bought" data-tooltip="tootip">Куплено</button>
-                    <button class="product-delete" data-tooltip="tootip">x</button>
+                    <button class="product-status bought" id="status-button2" data-tooltip="Купити">Куплено</button>
+                    <button class="product-delete" id="delete-button2" data-tooltip="Видалити">x</button>
                 </div>
 
-                <div class="product-item">
-                    <span class="product-input-area">
-                        <input class="product-input"></input>
-                    </span>    
-                    <span class="product-controls third">
-                        <button class="control-button pale" data-tooltip="tootip">-</button>
-                        <span class="product-amount">1</span>
-                        <button class="control-button plus" data-tooltip="tootip">+</button>
+                <div class="product-item" id="product-item3">
+                    <span class="product-name" id="product-name">Сир</span>
+                    <span class="product-controls second" id="product-controls">
+                        <button class="control-button minus" id="minus-button3" data-tooltip="Зменшити">-</button>
+                        <span class="product-amount" id="product-amount">2</span>
+                        <button class="control-button plus" id="plus-button3" data-tooltip="Додати">+</button>
                     </span>
-
-                        <button class="product-status bought" data-tooltip="tootip">Куплено</button>
-                        <button class="product-delete" data-tooltip="tootip">x</button>
+                    <button class="product-status bought" id="status-button3" data-tooltip="Купити">Куплено</button>
+                    <button class="product-delete" id="delete-button3" data-tooltip="Видалити">x</button>
                 </div>
             </div>
         </div>
 
-        <div class="basket">
-            <div class="basket-box">
-                <label class="basket-title">Залишилося</label>
+        <div class="basket" id="basket">
+            <div class="basket-box" id="basket-box">
+                <label class="basket-title" id="basket-title">Залишилося</label>
             </div>
 
-            <hr class="solid">
+            <hr class="solid" id="solid">
 
-            <div class="basket-box">
-                <div class="background-basket">
-                    <div class="item-button cheese">
-                        <span class="item-name">Сир</span>
-                        <span class="item-amount">1</span>
-                    </div>
-                    <div class="item-button">
-                        <span class="item-name cookie">Печиво</span>
-                        <span class="item-amount">2</span>
-                    </div>
+            <div class="basket-box" id="basket-box">
+                <div class="background-basket" id="background-basket">
                 </div>
             </div>
             
-            <hr class="solid">
+            <hr class="solid" id="solid">
 
-            <div class="basket-box">
-                <label class="basket-title">Куплено</label>
+            <div class="basket-box" id="basket-box">
+                <label class="basket-title" id="basket-title">Куплено</label>
             </div>
 
-            <hr class="solid">
+            <hr class="solid" id="solid">
 
-            <div class="basket-box">
-                <div class="background-basket">
-                    <div class="item-button">
-                        <span class="item-name crossed">Печиво</span>
-                        <span class="item-amount crossed">2</span>
-                    </div>
+            <div class="basket-box" id="basket-box">
+                <div class="background-basket" id="background-basket">
                 </div>
             </div>
         </div>
     </div>
 
+    <script src="./script.js"></script>
 </body>
 </html>
